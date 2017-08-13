@@ -1,0 +1,9 @@
+name: lyrxf
+version: 1
+cron:
+- description: SAE database backup
+  url: /sae_cron/db_backup.php
+  schedule: every day of month 07:00
+handle:
+- rewrite: if(!is_dir() && !is_file()) goto "index.php?%{QUERY_STRING}"
+- hostaccess: if( path ~ "/sae_cron/db_backup.php" ) allow "127.0.0.1 10.0.0.0/8"

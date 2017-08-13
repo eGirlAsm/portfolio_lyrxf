@@ -1,0 +1,27 @@
+/* reset CSS Document */
+
+
+/*	padding和margin	*/
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, button, textarea, p, blockquote, th, td { margin: 0; padding: 0; }
+/*	边框	*/
+fieldset, img { border: 0; }
+abbr, acronym { border: 0; font-variant: normal; }
+/*	行高(line-height)	*/
+/*
+行高默认所有元素都会继承的，所以给body设置行高为1就足够了。通常行高设为1时候，英文照常阅读，但中文就无法阅读了，行间距过于紧密导致容易看错行。通常在中文环境下得设置1.4到1.5才能是用户正常阅读。我建议是1.5，这样算出来的值也是整数。比如字体大小12px的时候行高是18px，字体大小16px时行高24px。看起来也会比较舒服。此外，还有一个不设置成1的重要原因是：IE下，行高为1时，中文字顶部会被削掉几像素，字体加粗时尤为明显。所以，重置的原则是好的，但切不可重置为1。
+*/
+body { line-height: 1; }
+/* tables still need ‘cellspacing=”0″‘ in the markup */
+table { border-collapse: collapse; border-spacing: 0; }
+/*引用元素的引号*/
+/*而Eric则比较周到，把q和blockquote都重置了。*/
+
+blockquote, q { quotes: none; }
+blockquote:before, blockquote:after, q:before, q:after { content: ”; content: none; }
+/*	链接	*/
+:link, :visited { text-decoration: none; }
+/* remember to highlight inserts somehow! */
+ins { text-decoration: none; }
+del { text-decoration: line-through; }
+/* Resetting HTML5! */
+section, article, aside, header, footer, nav, dialog, figure { display: block; }

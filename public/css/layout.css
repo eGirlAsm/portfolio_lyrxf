@@ -1,0 +1,125 @@
+/* CSS Document */
+
+/*首先除了reset.css之外要建立的layout.css，这里目前主要推荐放入.clearfix。清除浮动很重要。但这不属于样式重置，放在布局当中正合适。*/
+
+.clearfix:after {
+ content: “.”; display: block; height: 0; clear: both; visibility: hidden; }
+.clearfix { display: inline-block; }
+/* Hides from IE-mac \*/
+
+* html .clearfix { height: 1%; }
+.clearfix { display: block; }
+.clr { clear: both; }
+/*  html5 block	*/
+header, footer, nav, section, article { display: block; }
+/* End hide from IE-mac */
+
+
+
+/*
+
+ 考虑到兼容性，我们总会在CSS中队字体进行一些设置，这类设置往往设置在body标签上，无论是人人网，腾讯网，淘宝网，开心，新浪，网易等都是如此。以下为各个大型网站的body的字体设置：
+
+
+
+人人网：
+
+
+
+body{font-family:Tahoma,Verdana,STHeiTi,simsun,sans-serif;}
+
+
+
+其中simsun为中文字体。
+
+
+
+腾讯网：
+
+
+
+body{font-family:"宋体","Arial Narrow";}
+
+
+
+淘宝网：
+
+
+
+body{font:12px/1.5 tahoma,arial,sans-serif;}
+
+
+
+开心网：
+
+
+
+body{font-family:'lucida grande',tahoma,helvetica,arial,'bitstream vera sans',sans-serif;}
+
+
+
+新浪微博:
+
+
+
+html{font-family:Arial,Helvetica,sans-serif,"宋体"}
+
+
+
+白社会：
+
+
+
+body{font:12px/20px Tahoma,Verdana,Arial,sans-serif;}
+
+
+
+
+
+综合一下 
+
+*/
+
+body { font-family: "Microsoft YaHei", Arial, Helvetica, sans-serif, "宋体"; }
+/*   常用的缩略css	*/
+
+.left, .fl { float: left; }
+.right, .fr { float: right; }
+body { word-break: break-all; word-wrap: break-word; }
+body, input, textarea, button, select { font: 12px/1.5 "微软雅黑", "Microsoft Yahei", "Hiragino Sans GB", Helvetica, Arial, Helvetica, sans-serif, "宋体"; }
+/*http://www.educity.cn/jianzhan/630696.html*/
+
+/* 向上的箭头,类似于A,只有三个边，不能指定上边框 */
+
+div.arrow-up { width: 0; height: 0; border-left: 5px solid transparent; /* 左边框的宽 */ border-right: 5px solid transparent; /* 右边框的宽 */ border-bottom: 5px solid #2f2f2f; /* 下边框的长度|高,以及背景色 */ font-size: 0; line-height: 0; }
+/* 向下的箭头 类似于 V */
+
+div.arrow-down { width: 0; height: 0; border-left: 20px solid transparent; border-right: 20px solid transparent; border-top: 20px solid #f00; font-size: 0; line-height: 0; }
+/* 向左的箭头: 只有三个边：上、下、右。而 <| 总体来看，向左三角形的高=上+下边框的长度。 宽=右边框的长度 */
+
+div.arrow-left { width: 0; height: 0; border-bottom: 15px solid transparent; /* 下边框的高 */ border-top: 15px solid transparent; /* 上方边框的高 */ border-right: 10px solid yellow; /* 右边框的长度|宽度，以及背景色 */ font-size: 0; line-height: 0; }
+/* 向右的箭头: 只有三个边：上、下、左。而 |> 总体来看，向右三角形的高=上+下边框的长度。 宽=左边框的长度 */
+
+div.arrow-right { width: 0; height: 0; border-bottom: 15px solid transparent; /* 下边框的高 */ border-top: 15px solid transparent; /* 上方边框的高 */ border-left: 60px solid green; /* 左边框的长度|宽度，以及背景色 */ font-size: 0; line-height: 0; }
+div.tooltip { /* tooltip content styling in here; nothing to do with arrows */
+
+}
+/* shared with before and after */
+
+div.tooltip:before, div.tooltip:after { content: ' '; height: 0; position: absolute; width: 0; border: 10px solid transparent; /* arrow size */ }
+/* 向上的箭头 */
+
+/* top-stacked, smaller arrow */
+
+div.tooltip:before { border-bottom-color: #fff; /* arrow color */ /* positioning */
+
+position: absolute; top: -19px; left: 255px; z-index: 2; }
+/* arrow which acts as a background shadow */
+
+div.tooltip:after { border-bottom-color: #333; /* arrow color */ /* positioning */
+
+position: absolute; top: -24px; left: 255px; z-index: 1; }
+.btn {  padding: 6px 12px; display: inline-block; line-height: 12px; font-size: 12px; font-family: Microsoft Yahei; border-radius: 2px; text-align: center; white-space: nowrap; vertical-align: middle; cursor: pointer; text-decoration: none !important; margin-top: 20px; }
+.text { font-size: 12px; padding: 5px; font-family: Arial, 宋体; background: url("../images/bg-textbox.gif") repeat-x scroll center top #FFF; color: #555; border: 1px solid #ACB8CA; outline: medium none; }
+.cfg-btn { display: inline-block; font-family: Arial, 宋体, sans-serif; font-size: 12px; text-shadow: 1px 1px 0px #FFF; margin: 0px; padding: 3px 6px; white-space: nowrap; overflow: visible; text-decoration: none; outline: medium none; }
+input[type=submit]{border:none;}
